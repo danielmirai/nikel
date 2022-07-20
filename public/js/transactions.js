@@ -8,7 +8,7 @@ let data = {
 
 document.getElementById("button-logout").addEventListener("click", logout);
 
-// ADICIONAR LANÇAMENTO
+//ADICIONAR LANÇAMENTO
 document.getElementById("transaction-form").addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -56,7 +56,7 @@ function checkLogged() {
 function logout() {
     sessionStorage.removeItem("logged");
     localStorage.removeItem("session");
-
+    
     window.location.href = "index.html";
 }
 
@@ -73,12 +73,12 @@ function getTransactions() {
             }
 
             transactionsHtml += `
-                 <tr>
-                     <th scope="row">${item.date}</th>
-                     <td>${item.value.toFixed(2)}</td>
-                    <td>${type}</td>
-                    <td>${item.description}</td>
-                </tr>
+            <tr>
+                <th scope="row"> ${item.date} </th>
+                    <td> ${item.value.toFixed(2)} </td>
+                    <td> ${type} </td>
+                    <td> ${item.description} </td>
+            </tr>
             `
         })
     }
